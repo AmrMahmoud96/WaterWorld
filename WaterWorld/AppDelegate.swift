@@ -7,15 +7,39 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.badge,.alert,.sound]){(granted,error) in}
+        
+//        let content = UNMutableNotificationContent()
+//        content.title = NSString.localizedUserNotificationString(forKey: "Drink Water", arguments: nil)
+//        content.body = NSString.localizedUserNotificationString(forKey: "It's time to drink water.",
+//                                                                arguments: nil)
+//        content.sound = UNNotificationSound.default
+//        
+//        // Configure the trigger for a 7am wakeup.
+////        var dateInfo = DateComponents()
+////        dateInfo.hour = 15
+////        dateInfo.minute = 14
+////        let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: false)
+////        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (180*60), repeats: true)
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (60), repeats: true)
+//        // Create the request object.
+//        let request = UNNotificationRequest(identifier: "WaterAlarm", content: content, trigger: trigger)
+//        
+//        center.add(request) { (error : Error?) in
+//            if let theError = error {
+//                print(theError.localizedDescription)
+//            }
+//        }
         return true
     }
 

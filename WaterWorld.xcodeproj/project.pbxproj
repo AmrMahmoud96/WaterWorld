@@ -3,10 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA1B7AEA23EB5CF200FCB01B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1B7AE823EB5CF200FCB01B /* Interface.storyboard */; };
+		CA1B7AEC23EB5CF400FCB01B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1B7AEB23EB5CF400FCB01B /* Assets.xcassets */; };
+		CA1B7AF323EB5CF500FCB01B /* WaterWorldWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CA1B7AF223EB5CF500FCB01B /* WaterWorldWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CA1B7AF823EB5CF500FCB01B /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B7AF723EB5CF500FCB01B /* InterfaceController.swift */; };
+		CA1B7AFA23EB5CF500FCB01B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B7AF923EB5CF500FCB01B /* ExtensionDelegate.swift */; };
+		CA1B7AFC23EB5CF500FCB01B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B7AFB23EB5CF500FCB01B /* NotificationController.swift */; };
+		CA1B7AFE23EB5CF500FCB01B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1B7AFD23EB5CF500FCB01B /* Assets.xcassets */; };
+		CA1B7B0323EB5CF500FCB01B /* WaterWorldWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CA1B7AE623EB5CF200FCB01B /* WaterWorldWatch.app */; };
+		CA1B7B0C23EB62B800FCB01B /* watericon.svg in Resources */ = {isa = PBXBuildFile; fileRef = CA1B7B0B23EB62B800FCB01B /* watericon.svg */; };
+		CA1B7B0D23EB62B800FCB01B /* watericon.svg in Resources */ = {isa = PBXBuildFile; fileRef = CA1B7B0B23EB62B800FCB01B /* watericon.svg */; };
+		CA1B7B0E23EB62B800FCB01B /* watericon.svg in Resources */ = {isa = PBXBuildFile; fileRef = CA1B7B0B23EB62B800FCB01B /* watericon.svg */; };
 		CAF78A2223E9DB1000FF291F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF78A2123E9DB1000FF291F /* AppDelegate.swift */; };
 		CAF78A2423E9DB1000FF291F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF78A2323E9DB1000FF291F /* ViewController.swift */; };
 		CAF78A2723E9DB1000FF291F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF78A2523E9DB1000FF291F /* Main.storyboard */; };
@@ -14,7 +25,61 @@
 		CAF78A2C23E9DB1200FF291F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF78A2A23E9DB1200FF291F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CA1B7AF423EB5CF500FCB01B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAF78A1623E9DB1000FF291F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA1B7AF123EB5CF500FCB01B;
+			remoteInfo = "WaterWorldWatch Extension";
+		};
+		CA1B7B0123EB5CF500FCB01B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAF78A1623E9DB1000FF291F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA1B7AE523EB5CF200FCB01B;
+			remoteInfo = WaterWorldWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CA1B7AE323EB55BF00FCB01B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CA1B7B0323EB5CF500FCB01B /* WaterWorldWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1B7B0723EB5CF500FCB01B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CA1B7AF323EB5CF500FCB01B /* WaterWorldWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CA1B7AE623EB5CF200FCB01B /* WaterWorldWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterWorldWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1B7AE923EB5CF200FCB01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		CA1B7AEB23EB5CF400FCB01B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA1B7AED23EB5CF400FCB01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA1B7AF223EB5CF500FCB01B /* WaterWorldWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WaterWorldWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1B7AF723EB5CF500FCB01B /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		CA1B7AF923EB5CF500FCB01B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		CA1B7AFB23EB5CF500FCB01B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		CA1B7AFD23EB5CF500FCB01B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA1B7AFF23EB5CF500FCB01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA1B7B0023EB5CF500FCB01B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		CA1B7B0B23EB62B800FCB01B /* watericon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = watericon.svg; path = ../../../../Downloads/watericon.svg; sourceTree = "<group>"; };
 		CAF78A1E23E9DB1000FF291F /* WaterWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF78A2123E9DB1000FF291F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAF78A2323E9DB1000FF291F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +90,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CA1B7AEF23EB5CF500FCB01B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAF78A1B23E9DB1000FF291F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +107,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA1B7AE723EB5CF200FCB01B /* WaterWorldWatch */ = {
+			isa = PBXGroup;
+			children = (
+				CA1B7AE823EB5CF200FCB01B /* Interface.storyboard */,
+				CA1B7AEB23EB5CF400FCB01B /* Assets.xcassets */,
+				CA1B7AED23EB5CF400FCB01B /* Info.plist */,
+			);
+			path = WaterWorldWatch;
+			sourceTree = "<group>";
+		};
+		CA1B7AF623EB5CF500FCB01B /* WaterWorldWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CA1B7AF723EB5CF500FCB01B /* InterfaceController.swift */,
+				CA1B7AF923EB5CF500FCB01B /* ExtensionDelegate.swift */,
+				CA1B7AFB23EB5CF500FCB01B /* NotificationController.swift */,
+				CA1B7AFD23EB5CF500FCB01B /* Assets.xcassets */,
+				CA1B7AFF23EB5CF500FCB01B /* Info.plist */,
+				CA1B7B0023EB5CF500FCB01B /* PushNotificationPayload.apns */,
+			);
+			path = "WaterWorldWatch Extension";
+			sourceTree = "<group>";
+		};
 		CAF78A1523E9DB1000FF291F = {
 			isa = PBXGroup;
 			children = (
 				CAF78A2023E9DB1000FF291F /* WaterWorld */,
+				CA1B7AE723EB5CF200FCB01B /* WaterWorldWatch */,
+				CA1B7AF623EB5CF500FCB01B /* WaterWorldWatch Extension */,
 				CAF78A1F23E9DB1000FF291F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				CAF78A1E23E9DB1000FF291F /* WaterWorld.app */,
+				CA1B7AE623EB5CF200FCB01B /* WaterWorldWatch.app */,
+				CA1B7AF223EB5CF500FCB01B /* WaterWorldWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +159,7 @@
 				CAF78A2823E9DB1200FF291F /* Assets.xcassets */,
 				CAF78A2A23E9DB1200FF291F /* LaunchScreen.storyboard */,
 				CAF78A2D23E9DB1200FF291F /* Info.plist */,
+				CA1B7B0B23EB62B800FCB01B /* watericon.svg */,
 			);
 			path = WaterWorld;
 			sourceTree = "<group>";
@@ -67,6 +167,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CA1B7AE523EB5CF200FCB01B /* WaterWorldWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA1B7B0823EB5CF500FCB01B /* Build configuration list for PBXNativeTarget "WaterWorldWatch" */;
+			buildPhases = (
+				CA1B7AE423EB5CF200FCB01B /* Resources */,
+				CA1B7B0723EB5CF500FCB01B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA1B7AF523EB5CF500FCB01B /* PBXTargetDependency */,
+			);
+			name = WaterWorldWatch;
+			productName = WaterWorldWatch;
+			productReference = CA1B7AE623EB5CF200FCB01B /* WaterWorldWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		CA1B7AF123EB5CF500FCB01B /* WaterWorldWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA1B7B0423EB5CF500FCB01B /* Build configuration list for PBXNativeTarget "WaterWorldWatch Extension" */;
+			buildPhases = (
+				CA1B7AEE23EB5CF500FCB01B /* Sources */,
+				CA1B7AEF23EB5CF500FCB01B /* Frameworks */,
+				CA1B7AF023EB5CF500FCB01B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WaterWorldWatch Extension";
+			productName = "WaterWorldWatch Extension";
+			productReference = CA1B7AF223EB5CF500FCB01B /* WaterWorldWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		CAF78A1D23E9DB1000FF291F /* WaterWorld */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAF78A3023E9DB1200FF291F /* Build configuration list for PBXNativeTarget "WaterWorld" */;
@@ -74,10 +208,12 @@
 				CAF78A1A23E9DB1000FF291F /* Sources */,
 				CAF78A1B23E9DB1000FF291F /* Frameworks */,
 				CAF78A1C23E9DB1000FF291F /* Resources */,
+				CA1B7AE323EB55BF00FCB01B /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CA1B7B0223EB5CF500FCB01B /* PBXTargetDependency */,
 			);
 			name = WaterWorld;
 			productName = WaterWorld;
@@ -94,13 +230,24 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Amr Mahmoud";
 				TargetAttributes = {
+					CA1B7AE523EB5CF200FCB01B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					CA1B7AF123EB5CF500FCB01B = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					CAF78A1D23E9DB1000FF291F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
 			buildConfigurationList = CAF78A1923E9DB1000FF291F /* Build configuration list for PBXProject "WaterWorld" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -113,11 +260,32 @@
 			projectRoot = "";
 			targets = (
 				CAF78A1D23E9DB1000FF291F /* WaterWorld */,
+				CA1B7AE523EB5CF200FCB01B /* WaterWorldWatch */,
+				CA1B7AF123EB5CF500FCB01B /* WaterWorldWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CA1B7AE423EB5CF200FCB01B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1B7B0D23EB62B800FCB01B /* watericon.svg in Resources */,
+				CA1B7AEC23EB5CF400FCB01B /* Assets.xcassets in Resources */,
+				CA1B7AEA23EB5CF200FCB01B /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1B7AF023EB5CF500FCB01B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1B7AFE23EB5CF500FCB01B /* Assets.xcassets in Resources */,
+				CA1B7B0E23EB62B800FCB01B /* watericon.svg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAF78A1C23E9DB1000FF291F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -125,12 +293,23 @@
 				CAF78A2C23E9DB1200FF291F /* LaunchScreen.storyboard in Resources */,
 				CAF78A2923E9DB1200FF291F /* Assets.xcassets in Resources */,
 				CAF78A2723E9DB1000FF291F /* Main.storyboard in Resources */,
+				CA1B7B0C23EB62B800FCB01B /* watericon.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CA1B7AEE23EB5CF500FCB01B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1B7AFC23EB5CF500FCB01B /* NotificationController.swift in Sources */,
+				CA1B7AFA23EB5CF500FCB01B /* ExtensionDelegate.swift in Sources */,
+				CA1B7AF823EB5CF500FCB01B /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAF78A1A23E9DB1000FF291F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,7 +321,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CA1B7AF523EB5CF500FCB01B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA1B7AF123EB5CF500FCB01B /* WaterWorldWatch Extension */;
+			targetProxy = CA1B7AF423EB5CF500FCB01B /* PBXContainerItemProxy */;
+		};
+		CA1B7B0223EB5CF500FCB01B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA1B7AE523EB5CF200FCB01B /* WaterWorldWatch */;
+			targetProxy = CA1B7B0123EB5CF500FCB01B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		CA1B7AE823EB5CF200FCB01B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA1B7AE923EB5CF200FCB01B /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		CAF78A2523E9DB1000FF291F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -162,6 +362,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CA1B7B0523EB5CF500FCB01B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5DYYH957Q;
+				INFOPLIST_FILE = "WaterWorldWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.originals.WaterWorld.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		CA1B7B0623EB5CF500FCB01B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5DYYH957Q;
+				INFOPLIST_FILE = "WaterWorldWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.originals.WaterWorld.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		CA1B7B0923EB5CF500FCB01B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5DYYH957Q;
+				IBSC_MODULE = WaterWorldWatch_Extension;
+				INFOPLIST_FILE = WaterWorldWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.originals.WaterWorld.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		CA1B7B0A23EB5CF500FCB01B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5DYYH957Q;
+				IBSC_MODULE = WaterWorldWatch_Extension;
+				INFOPLIST_FILE = WaterWorldWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.originals.WaterWorld.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
 		CAF78A2E23E9DB1200FF291F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -281,8 +563,9 @@
 		CAF78A3123E9DB1200FF291F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5DYYH957Q;
 				INFOPLIST_FILE = WaterWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,8 +581,9 @@
 		CAF78A3223E9DB1200FF291F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5DYYH957Q;
 				INFOPLIST_FILE = WaterWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -315,6 +599,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA1B7B0423EB5CF500FCB01B /* Build configuration list for PBXNativeTarget "WaterWorldWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1B7B0523EB5CF500FCB01B /* Debug */,
+				CA1B7B0623EB5CF500FCB01B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA1B7B0823EB5CF500FCB01B /* Build configuration list for PBXNativeTarget "WaterWorldWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1B7B0923EB5CF500FCB01B /* Debug */,
+				CA1B7B0A23EB5CF500FCB01B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CAF78A1923E9DB1000FF291F /* Build configuration list for PBXProject "WaterWorld" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

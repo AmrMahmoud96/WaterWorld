@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,87 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WaterWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminders are currently: OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3f-ci-IjU">
+                                <rect key="frame" x="76" y="95" width="223" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GYO-63-5yh">
+                                <rect key="frame" x="164.66666666666666" y="666" width="46" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRb-SB-rtf">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="onStartClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q1L-kB-fU5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5S6-f8-xyo">
+                                        <rect key="frame" x="0.0" y="49" width="46" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="onStopClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Obx-k6-0KC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="3NE-cq-23i">
+                                <rect key="frame" x="0.0" y="323" width="375" height="166.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Every 3 hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naI-QY-r8J">
+                                        <rect key="frame" x="8" y="7.9999999999999982" width="359" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lJg-Fl-m9R">
+                                        <rect key="frame" x="6" y="63.333333333333314" width="363" height="31"/>
+                                        <connections>
+                                            <action selector="onSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="wKY-wJ-8oE"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xI2-0o-iwq">
+                                        <rect key="frame" x="8" y="128.33333333333331" width="359" height="30"/>
+                                        <state key="normal" title="Set">
+                                            <color key="titleColor" red="0.056909830528607187" green="0.68523316062176165" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSetTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oSd-WG-34Q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="B3f-ci-IjU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="EQi-Nm-ahO"/>
+                            <constraint firstItem="B3f-ci-IjU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S98-lH-C6S"/>
+                            <constraint firstItem="3NE-cq-23i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bR6-ya-Hvt"/>
+                            <constraint firstItem="GYO-63-5yh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dcp-Jx-3vl"/>
+                            <constraint firstItem="3NE-cq-23i" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="vDU-eg-NQa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GYO-63-5yh" secondAttribute="bottom" constant="24" id="vlW-Ui-3Rc"/>
+                            <constraint firstItem="3NE-cq-23i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vsF-lb-5WO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="Slider" destination="lJg-Fl-m9R" id="jsU-WU-mKU"/>
+                        <outlet property="Status" destination="B3f-ci-IjU" id="lwm-md-sDY"/>
+                        <outlet property="TimerLabel" destination="naI-QY-r8J" id="X9S-3E-dFN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="36" y="26.600985221674879"/>
         </scene>
     </scenes>
 </document>
