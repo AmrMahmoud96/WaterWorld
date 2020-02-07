@@ -56,6 +56,8 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lJg-Fl-m9R">
                                         <rect key="frame" x="6" y="63.333333333333314" width="363" height="31"/>
+                                        <color key="tintColor" red="0.082352941176470587" green="0.49411764705882355" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="minimumTrackTintColor" red="0.056909830529999997" green="0.68523316059999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="onSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="wKY-wJ-8oE"/>
                                         </connections>
@@ -72,9 +74,31 @@
                                 </subviews>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="ey5-12-Hek">
+                                <rect key="frame" x="95" y="145" width="185" height="71.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time until next reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iy-lR-0Yh">
+                                        <rect key="frame" x="0.0" y="0.0" width="185" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNX-Ad-r9g">
+                                        <rect key="frame" x="0.0" y="41.333333333333343" width="185" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PNX-Ad-r9g" firstAttribute="centerX" secondItem="ey5-12-Hek" secondAttribute="centerX" id="Mnj-js-idX"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ey5-12-Hek" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1al-eg-SLf"/>
+                            <constraint firstItem="ey5-12-Hek" firstAttribute="top" secondItem="B3f-ci-IjU" secondAttribute="bottom" constant="29.666666666666671" id="ALB-LI-oQh"/>
                             <constraint firstItem="B3f-ci-IjU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="EQi-Nm-ahO"/>
                             <constraint firstItem="B3f-ci-IjU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S98-lH-C6S"/>
                             <constraint firstItem="3NE-cq-23i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bR6-ya-Hvt"/>
@@ -89,6 +113,8 @@
                         <outlet property="Slider" destination="lJg-Fl-m9R" id="jsU-WU-mKU"/>
                         <outlet property="Status" destination="B3f-ci-IjU" id="lwm-md-sDY"/>
                         <outlet property="TimerLabel" destination="naI-QY-r8J" id="X9S-3E-dFN"/>
+                        <outlet property="currTimer" destination="PNX-Ad-r9g" id="mCq-cc-4WV"/>
+                        <outlet property="timerView" destination="ey5-12-Hek" id="kzo-B8-nBa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
