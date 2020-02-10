@@ -4,7 +4,8 @@ An iPhone app to set scheduled reminders to drink water. Made in 12 hours.
 Features:
 - Scheduled notifications (extended to WatchOS)
 - Customizable notification timing
-- Stopping and restarting notifications
+- Active notification timer display
+- Stop/start notifications
 - User settings persistance
 
 
