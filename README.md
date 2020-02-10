@@ -1,3 +1,5 @@
+<img src="/WaterWorld/Assets.xcassets/AppIcon-1.appiconset/100.png" alt="WaterWorld logo" width=""/> 
+
 # WaterWorld
 An iPhone app to set scheduled reminders to drink water. Made in 12 hours.
 
