@@ -10,6 +10,18 @@ import UIKit
 import UserNotificationsUI
 import UserNotifications
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 class ViewController: UIViewController {
 //    let nc = NotificationCenter.default
     @IBOutlet weak var timerView: UIStackView!
@@ -17,11 +29,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var currTimer: UILabel!
     @IBOutlet weak var TimerLabel: UILabel!
     @IBOutlet weak var Status: UILabel!
+    @IBOutlet weak var msgText: UITextField!
     let defaults = UserDefaults.standard
     var sliderVal = Float(3)
     var t: Timer?
+    var message = "It's time to drink water."
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         if defaults.bool(forKey: "ON") == true {
             Status.text="Reminders are currently: ON"
             timerView.isHidden = false
@@ -35,6 +50,13 @@ class ViewController: UIViewController {
             defaults.set(sliderVal,forKey:"timeInterval")
         }else{
             sliderVal = defaults.float(forKey: "timeInterval")
+        }
+        if defaults.object(forKey: "notificationMessage") == nil {
+            defaults.set(message,forKey:"notificationMessage")
+            
+        }else{
+            message = defaults.string(forKey: "notificationMessage")!
+            msgText.placeholder = message
         }
         print(sliderVal)
         TimerLabel.text = "Every "+"\(sliderVal)"+" hours."
@@ -72,8 +94,8 @@ class ViewController: UIViewController {
         
         let content: UNMutableNotificationContent = UNMutableNotificationContent()
         
-        content.title = "Drink Water"
-        content.body = "It's time to drink water."
+        content.title = "Reminder"
+        content.body = message
         content.sound = UNNotificationSound.default
         //        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: (180*60), repeats: true)
         print(sliderVal)
@@ -92,6 +114,16 @@ class ViewController: UIViewController {
         timerView.isHidden = false
         defaults.set(Date(),forKey:"activatedOn")
         timerOn()
+    }
+    @IBAction func onChangeMessage(_ sender: UIButton) {
+        if let message = msgText.text, !message.isEmpty
+        {
+            defaults.set(message, forKey: "notificationMessage")
+            msgText.placeholder = message
+        }
+//        if msgText.text != nil{
+//            message = msgText.text!
+//        }
     }
     @IBAction func onStopClick(_ sender: UIButton) {
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
